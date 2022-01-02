@@ -30,7 +30,7 @@ const perimetrotriangulo = ladotriangulo1+ladotriangulo2+basetriangulo1
 
 console.log('El perimetro del triangulo es: ' + perimetrotriangulo)
 
-const areacuadrado = (basetriangulo1*alturatriangulo1)/2
+const areatriangulo = (basetriangulo1*alturatriangulo1)/2
 
 console.log('La altura del triangulo es: ' + alturatriangulo1)
 
