@@ -15,6 +15,7 @@ console.log('El perimetro del cuadrado es: ' + areacuadrado)
 
 console.groupEnd
 
+
 console.group("Triangulos");
 
 
@@ -35,3 +36,23 @@ const areatriangulo = (basetriangulo1*alturatriangulo1)/2
 console.log('La altura del triangulo es: ' + alturatriangulo1)
 
 console.groupEnd
+
+
+
+console.group("Circulos");
+//Radio
+const radioCirculo = 4;
+console.log("El radio del circulo es " + radioCirculo + " cms.");
+//Diametro
+const diametroCirculo = radioCirculo * 2;
+console.log("El diametro del circulo es " + diametroCirculo + " cms.");
+// PI
+const PI = Math.PI;
+console.log("PI es " + PI + ".");
+// Perimetro
+const perimetroCirculo = diametroCirculo * PI;
+console.log("El perimetro del circulo es " + perimetroCirculo + " cms.");
+//Area
+const areaCirculo = PI * (radioCirculo**2);
+console.log("El area del circulo es " + areaCirculo + " cms.");
+console.groupEnd();
