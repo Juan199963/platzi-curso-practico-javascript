@@ -63,3 +63,42 @@ function calculoMediana(lista_mediana){
         return mediana;
     }
 }
+
+
+const lista_modita = [
+    1,1,1,2,2,3,3,3,3,3,4,4,4,4,4,4,4,4,5,5,5,
+];
+
+
+function calculoModa(lista_moda){
+
+    const listaAñadida = {};
+
+
+    lista_moda.map(
+        function (elemento){
+            if(listaAñadida[elemento]){
+                listaAñadida[elemento] += 1;
+            } else {
+                listaAñadida[elemento] = 1;
+
+            }
+
+
+            
+        }
+    
+    );
+            
+    // console.log(listaAñadida)
+    const lista1Array = Object.entries(listaAñadida).sort(
+        function (a,b){
+            return a[1]-b[1];
+        });
+
+    const moda = lista1Array[lista1Array.length - 1]
+
+    return moda;
+
+
+};
