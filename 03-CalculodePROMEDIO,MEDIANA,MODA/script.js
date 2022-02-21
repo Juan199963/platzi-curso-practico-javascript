@@ -1,7 +1,7 @@
 const lista1 = [
     100,
     200,
-    300,
+    3,
     500,
     600,
 ];
@@ -28,7 +28,6 @@ function calculoPromedio(lista){
     return promedioLista;
 }
 
-const mitadLista1 = parseInt(lista1.length/2);
 
 
 function esPar(numerito){
@@ -41,14 +40,26 @@ function esPar(numerito){
 
 let mediana;
 
-if (esPar(lista1.length)){
-    const element1 = lista1[mitadLista1 -1];
-    const element2 = lista1[mitadLista1];
-
-    mediana = calculoPromedio([element1, element2]);
+function comparenumbers(a,b){
+    return a- b
+};
 
 
+function calculoMediana(lista_mediana){
 
-}else{
-    mediana = lista1[mitadLista1];
+    
+    const ordenada = lista_mediana.sort((a,b)=>{return a-b});
+
+    if (esPar(ordenada.length)){
+        const element1 = ordenada[parseInt(lista.length/2)-1];
+        const element2 = ordenada[parseInt(lista.length/2)];
+
+        mediana = calculoPromedio([element1, element2]);
+
+        return mediana;
+
+    }else{
+        mediana = ordenada[parseInt(ordenada.length/2)];
+        return mediana;
+    }
 }
